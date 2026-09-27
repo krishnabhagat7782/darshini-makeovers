@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Darshini Makeovers · Bridal & Glam</title>
+  <!-- Google Fonts for elegant typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #fef8f4;
+      font-family: 'Montserrat', sans-serif;
+      color: #2e2421;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    /* layout utilities */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      padding: 5rem 0;
+    }
+
+    /* headings */
+    h1, h2, h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      font-size: 4.2rem;
+      line-height: 1.1;
+      color: #1f1a17;
+    }
+
+    h2 {
+      font-size: 2.8rem;
+      margin-bottom: 1.2rem;
+      color: #2b211d;
+      font-weight: 500;
+      border-bottom: 2px solid #e8d7cd;
+      display: inline-block;
+      padding-bottom: 0.4rem;
+    }
+
+    h3 {
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: #3b2e28;
+    }
+
+    .section-subhead {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #b2988a;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    /* header / nav */
+    .navbar {
+      position: sticky;
+      top: 0;
+      background-color: #fef8f4f2;
+      backdrop-filter: blur(8px);
+      padding: 1.2rem 0;
+      z-index: 10;
+      border-bottom: 1px solid #edd9d0;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      color: #1f1a17;
+      text-decoration: none;
+      border-left: 4px solid #d9b8a4;
+      padding-left: 0.8rem;
+      line-height: 1.2;
+    }
+
+    .logo span {
+      font-size: 1.1rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      display: block;
+      color: #8f7567;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      font-size: 0.9rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #3b2e28;
+      transition: color 0.2s;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #b48b73;
+    }
+
+    /* hero */
+    .hero {
+      padding: 3rem 0 5rem;
+    }
+
+    .hero-grid {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+    }
+
+    .hero-content {
+      flex: 1.1;
+    }
+
+    .hero-content .badge {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #b48b73;
+      margin-bottom: 0.8rem;
+      display: inline-block;
+      background: #f3e5dc;
+      padding: 0.3rem 1rem;
+      border-radius: 30px;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      color: #574a42;
+      margin: 1.5rem 0 2rem;
+      font-weight: 300;
+      max-width: 550px;
+    }
+
+    .hero-tagline {
+      font-size: 1.1rem;
+      color: #6f5d54;
+      font-style: italic;
+      font-family: 'Cormorant Garamond', serif;
+      margin-bottom: 2rem;
+    }
+
+    .hero-image {
+      flex: 0.9;
+      background: #e8d9d0;
+      border-radius: 200px 200px 120px 120px / 180px 180px 120px 120px;
+      min-height: 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: linear-gradient(145deg, #eedbd0, #e6cec0);
+      box-shadow: 20px 20px 40px rgba(182, 145, 125, 0.15);
+      color: #9b8070;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      font-weight: 300;
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-image::before {
+      content: "✨";
+      font-size: 3rem;
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      opacity: 0.6;
+    }
+
+    .hero-image::after {
+      content: "✦";
+      font-size: 3rem;
+      position: absolute;
+      bottom: 20px;
+      right: 30px;
+      opacity: 0.6;
+    }
+
+    .hero-image span {
+      background: rgba(255, 248, 244, 0.7);
+      padding: 0.8rem 1.8rem;
+      border-radius: 60px;
+      backdrop-filter: blur(4px);
+      color: #5f4c41;
+      font-weight: 400;
+    }
+
+    /* buttons */
+    .btn {
+      display: inline-block;
+      background-color: #5e3f30;
+      color: #fef8f4;
+      padding: 0.9rem 2.2rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      border: 1px solid #5e3f30;
+      transition: all 0.25s;
+      margin-right: 1rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #5e3f30;
+      border: 1px solid #bcaa9e;
+    }
+
+    .btn-outline:hover {
+      background: #5e3f30;
+      color: white;
+    }
+
+    .btn:hover {
+      background: #3f2d23;
+      border-color: #3f2d23;
+    }
+
+    /* about */
+    .about-grid {
+      display: flex;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-text {
+      flex: 1;
+    }
+
+    .about-text p {
+      font-size: 1.1rem;
+      color: #4a3c35;
+      margin-bottom: 1.5rem;
+      font-weight: 300;
+    }
+
+    .about-list {
+      list-style: none;
+      margin-top: 2rem;
+    }
+
+    .about-list li {
+      font-size: 1rem;
+      padding: 0.7rem 0;
+      border-bottom: 1px solid #edd9d0;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-weight: 400;
+      color: #3b2e28;
+    }
+
+    .about-list i {
+      color: #b48b73;
+      font-size: 1.1rem;
+      width: 1.5rem;
+    }
+
+    .about-image {
+      flex: 0.8;
+      background: #ebddd4;
+      border-radius: 40% 60% 40% 60% / 50% 40% 60% 50%;
+      min-height: 360px;
+      background-image: linear-gradient(135deg, #f1e3da, #e3cec1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #a48878;
+      font-size: 2rem;
+      font-family: 'Cormorant Garamond', serif;
+      text-align: center;
+      padding: 2rem;
+      box-shadow: -15px 15px 30px rgba(182, 145, 125, 0.15);
+    }
+
+    /* Glimpses / gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.8rem;
+      margin-top: 2.5rem;
+    }
+
+    .glimpse-card {
+      background: #faf1ec;
+      border-radius: 30px;
+      padding: 1.8rem 1rem;
+      text-align: center;
+      box-shadow: 0 10px 20px -8px rgba(110, 80, 65, 0.08);
+      border: 1px solid #f0dfd6;
+      transition: transform 0.2s, box-shadow 0.2s;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      color: #58463b;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .glimpse-card i {
+      font-size: 2.4rem;
+      color: #c4a28b;
+    }
+
+    .glimpse-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -10px rgba(110, 80, 65, 0.15);
+      background: #fffaf7;
+    }
+
+    .glimpse-note {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #8f7567;
+      font-style: italic;
+    }
+
+    /* booking */
+    .booking {
+      background: #f3e8e1;
+      border-radius: 60px 20px 60px 20px;
+      padding: 4rem 3rem;
+      margin: 2rem 0;
+      box-shadow: 0 15px 30px -15px rgba(100, 70, 55, 0.2);
+    }
+
+    .booking h2 {
+      border-bottom: none;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .booking p {
+      font-size: 1.2rem;
+      margin-bottom: 2.5rem;
+      color: #4b3c35;
+      max-width: 600px;
+    }
+
+    .contact-methods {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      background: #5e3f30;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.2s;
+      font-size: 1rem;
+    }
+
+    .contact-btn i {
+      font-size: 1.3rem;
+    }
+
+    .contact-btn.instagram {
+      background: #c58b6b;
+    }
+
+    .contact-btn:hover {
+      background: #3f2d23;
+      transform: scale(1.02);
+    }
+
+    .contact-btn.instagram:hover {
+      background: #a06e52;
+    }
+
+    /* location */
+    .location {
+      padding-bottom: 5rem;
+    }
+
+    .location-card {
+      background: #fff6f1;
+      border-radius: 40px;
+      padding: 3rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      border: 1px solid #edd9d0;
+    }
+
+    .location-info h2 {
+      margin-bottom: 0.8rem;
+      border-bottom: 2px solid #e3cfc3;
+    }
+
+    .location-info p {
+      font-size: 1.1rem;
+      color: #574a42;
+      margin-bottom: 1.5rem;
+    }
+
+    .map-placeholder {
+      background: #e7d8ce;
+      border-radius: 30px;
+      padding: 2rem 2.5rem;
+      text-align: center;
+      color: #665548;
+      font-weight: 400;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: inset 0 0 0 1px #fffcf9;
+    }
+
+    .map-placeholder i {
+      font-size: 2.5rem;
+      color: #a88068;
+    }
+
+    /* footer */
+    footer {
+      background: #221c19;
+      color: #ccbcb2;
+      padding: 2rem 0;
+      text-align: center;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+    }
+
+    footer a {
+      color: #d9b8a4;
+      text-decoration: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      h1 { font-size: 3.2rem; }
+      h2 { font-size: 2.2rem; }
+      .hero-grid, .about-grid { flex-direction: column; }
+      .hero-image, .about-image { width: 100%; min-height: 280px; }
+      .nav-links { display: none; }
+      .booking { padding: 2.5rem 1.5rem; }
+      .location-card { flex-direction: column; text-align: center; }
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.5rem; }
+      .logo { font-size: 1.6rem; }
+      .logo span { font-size: 0.8rem; }
+      section { padding: 3rem 0; }
+      .hero-content p { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">Darshini <span>Makeovers</span></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#glimpses">Glimpses</a>
+        <a href="#book">Book</a>
+        <a href="#location">Location</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="badge">Beauty Studio</span>
+        <h1>DARSHINI<br>MAKEOVERS</h1>
+        <p class="hero-tagline">Creative Bridal & Glam Makeovers</p>
+        <p>Elegant makeup with a bold, artistic touch. Professional makeup services for brides, events, and glamour photos. Every look is created to feel luxurious, feminine, and unforgettable.</p>
+        <div>
+          <a href="#book" class="btn">Book now</a>
+          <a href="#glimpses" class="btn btn-outline">View gallery</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <span>Bridal Glam Luxury</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="container">
+    <div class="section-subhead">About Darshini</div>
+    <div class="about-grid">
+      <div class="about-text">
+        <h2>Luxury makeup artistry for unforgettable moments</h2>
+        <p>Darshini Makeovers specializes in bridal beauty, glam styling, and feminine artistry. Each session is tailored to your personality so you feel radiant, confident, and camera-ready.</p>
+        <ul class="about-list">
+          <li><i class="fas fa-check-circle"></i> Bridal makeup and consultations</li>
+          <li><i class="fas fa-check-circle"></i> Event styling and glam transformations</li>
+          <li><i class="fas fa-check-circle"></i> Custom looks for photoshoots and celebrations</li>
+        </ul>
+      </div>
+      <div class="about-image">
+        <div>✦<br>Artistry<br>✦</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Glimpses / Gallery Section -->
+  <section id="glimpses" class="container">
+    <div class="section-subhead">Glimpses</div>
+    <h2>See the makeup artistry</h2>
+    <div class="gallery-grid">
+      <div class="glimpse-card">
+        <i class="fas fa-crown"></i>
+        Soft glam bridal look
+      </div>
+      <div class="glimpse-card">
+        <i class="fas fa-moon"></i>
+        Bold evening makeup
+      </div>
+      <div class="glimpse-card">
+        <i class="fas fa-paint-brush"></i>
+        Artistic transformation
+      </div>
+      <div class="glimpse-card">
+        <i class="fas fa-star"></i>
+        Elegant bridal glow
+      </div>
+    </div>
+    <p class="glimpse-note">✨ Your gallery now uses the photos in the assets/glimpse photo folder.</p>
+  </section>
+
+  <!-- Book Now Section -->
+  <section id="book" class="container">
+    <div class="booking">
+      <div class="section-subhead" style="color:#b48b73;">Book Now</div>
+      <h2>Ready for your makeover?</h2>
+      <p>Contact Darshini directly through WhatsApp or Instagram to schedule your appointment and view your custom makeup options.</p>
+      <div class="contact-methods">
+        <a href="#" class="contact-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="#" class="contact-btn instagram"><i class="fab fa-instagram"></i> Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location Section -->
+  <section id="location" class="container location">
+    <div class="location-card">
+      <div class="location-info">
+        <div class="section-subhead">Location</div>
+        <h2>Visit Darshini Makeovers</h2>
+        <p>See the studio location and get directions.</p>
+        <a href="#" class="btn btn-outline" style="margin-top: 0.5rem;"><i class="fas fa-map-pin"></i> Get directions</a>
+      </div>
+      <div class="map-placeholder">
+        <i class="fas fa-map-marked-alt"></i>
+        <span>Studio location map</span>
+        <span style="font-size:0.8rem; opacity:0.7;">(Google Maps embed area)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2025 Darshini Makeovers — bridal & glam artistry. All rights reserved.</p>
+      <p style="margin-top: 0.5rem; font-size: 0.75rem;">Made with <i class="fas fa-heart" style="color: #b48b73;"></i> for beautiful moments.</p>
+    </div>
+  </footer>
+
+  <!-- simple smooth anchor behaviour -->
+  <script>
+    (function() {
+      // Smooth scrolling for anchor links (optional but adds polish)
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          if (href === "#" || href === "") return;
+          const target = document.querySelector(href);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
